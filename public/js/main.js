@@ -111,9 +111,9 @@ function loadExistingData() {
     });
 }
 
-function displayData(data) {
+function displayData(data, containerDivName) {
     loadedData = data;
-    document.getElementById("dataContainer").innerHTML = "";
+    document.getElementById(containerDivName).innerHTML = "";
     data.forEach(elem => {
         var item = document.createElement("div");
         item.id = "div" + elem["_id"];
@@ -165,4 +165,34 @@ function displayData(data) {
         document.getElementById("dataContainer").appendChild(item);
     })
 
+}
+
+function toggleOtherData() {
+  var otherData = document.getElementById("otherDataContainer");
+  if (otherData.style.display == "block") {
+    otherData.style.display = "none";
+  } else {
+    otherData.style.display = "block";
+  }
+}
+
+var loadedData = [];
+
+function editData(id){
+ var tmp = id.split("edit_");
+ var item_id = tmp[1];
+ console.log(item_id);
+
+loadedData.forEach(item => {
+    if (item._id == item_id && item["owner"] == "Syuzanna") {
+        console.log(item); 
+        localStorage = window.localStorage;
+        localStorage.setItem('editItem', JSON.stringify(item));
+        if (item["project"] == "Book" ) {
+          document.location  = "edit_book.html"; 
+        } else {
+          document.location  = "edit_dance.html"; 
+        }
+    }
+  })
 }

@@ -80,16 +80,33 @@ function saveData() {
 }
 
 function loadExistingData() {
+  myBookData = [];
+  myDanceData = [];
+  otherData = [];
     $.ajax({
         type : "GET",
         url : "/data",
         dataType : "json",
         success : function(data) {
+          loadedData = data.data;
         	console.log("success", data);
-            displayData(data.data);
-        },
+            data.data.forEach(elem => {
+          if (elem["owner"] == "Syuzanna") {
+            if (elem["project"] == "Book") {
+              myBookData.push(elem);
+            } else {
+              myDanceData.push(elem);
+            }
+          } else {
+            otherData.push(elem);
+          }
+        })
+        displayData(myBookData, "bookDataContainer");
+        displayData(myDanceData, "danceDataContainer");
+        displayData(otherData, "otherDataContainer");
+      },
         error : function(data) {
-            console.log("Error")
+            console.log("Error");
         }
     });
 }

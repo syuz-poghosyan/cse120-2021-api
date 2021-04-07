@@ -162,7 +162,7 @@ function displayData(data, containerDivName) {
             deleteData(e.target.id);
         }, false);
         item.appendChild(button);
-        document.getElementById("dataContainer").appendChild(item);
+        document.getElementById(containerDivName).appendChild(item);
     })
 
 }

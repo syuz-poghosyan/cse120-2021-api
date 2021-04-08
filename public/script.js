@@ -151,7 +151,7 @@ function UpdateData(e){
   e.preventDefault();
   $.ajax({
     type: 'POST',
-    url: "https://cse-120-2021-api-syuzi.herokuapp.com/data",
+    url: "https://cse-120-2021-api-syuzi.herokuapp.com/data/update",
     data: Myformdata,
     cache: false,
     dataType : 'json',

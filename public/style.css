@@ -134,9 +134,6 @@ div.item button {
   background-color: rgb(195, 196, 196) ;
 }
 
-#otherDataContainer div.item{
-  background-color: rgb(212, 124, 193) ;
-}
 
 h2 {
  background-color: darkgray;
@@ -146,9 +143,6 @@ h2 {
  font-size: 30pt; 
  }
 
-#otherDataContainer{
-display: none;
-}
 
 
 .main {

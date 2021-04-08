@@ -145,6 +145,28 @@ function SaveData(e){
     }
   });  
 }
+
+function UpdateData(e){
+  console.log(Myformdata)
+  e.preventDefault();
+  $.ajax({
+    type: 'POST',
+    url: "https://cse-120-2021-api-syuzi.herokuapp.com/data",
+    data: Myformdata,
+    cache: false,
+    dataType : 'json',
+    success: function (data) {
+      console.log("successfully editted");
+    },
+    error: function (xhr) {
+      console.error("Error in editting", xhr);
+    },
+    complete: function () {
+      console.log("Complete");  
+    }
+  });  
+}
+
 var Myformdata={
   "project": "Book",
   "owner": "Syuzanna",

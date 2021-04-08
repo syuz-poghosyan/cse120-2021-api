@@ -213,7 +213,6 @@ function deleteData(id) {
 function loadExistingData() {
   myBookData = [];
   myDanceData = [];
-  otherData = [];
     $.ajax({
         type : "GET",
         url : "https://cse-120-2021-api-syuzi.herokuapp.com/data",
@@ -222,19 +221,14 @@ function loadExistingData() {
           loadedData = data.data;
         	console.log("success", data);
             data.data.forEach(elem => {
-          if (elem["owner"] == "Syuzanna") {
             if (elem["project"] == "Book") {
               myBookData.push(elem);
             } else {
               myDanceData.push(elem);
-            }
-          } else {
-            otherData.push(elem);
-          }
+            }    
         })
         displayData(myBookData, "bookDataContainer");
         displayData(myDanceData, "danceDataContainer");
-        displayData(otherData, "otherDataContainer");
       },
         error : function(data) {
             console.log("Error");

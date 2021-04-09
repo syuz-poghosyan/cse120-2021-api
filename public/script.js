@@ -148,6 +148,7 @@ function SaveData(e){
 
 function UpdateData(e){
   console.log(Myformdata)
+  Myformdata.id=document.getElementById("_id").value;
   e.preventDefault();
   $.ajax({
     type: 'POST',

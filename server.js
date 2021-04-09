@@ -86,7 +86,7 @@ app.post('/data/update', function (req, res) {
     let newValue = req.body.value;
     const query = { "_id": ObjectId(id)};
    // let update = {$set: {newValue}};
-    client.db('cse120-2021-db').collection('books').updateOne(query, {newValue})
+    client.db('cse120-2021-db').collection('books').updateOne(query, {$set: req.body})
       .then(result => {
         console.log(result)
         res.send({"message":"Editted"});

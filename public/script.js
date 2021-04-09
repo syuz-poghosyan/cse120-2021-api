@@ -375,6 +375,102 @@ function loadBookEditItem() {
   
 }
 
+function handleTitleEditChange(){
+ Myformdata.title=document.getElementById("titleForm").value;
+}
+
+function handleFullNameEditChange(){
+ Myformdata.fullname=document.getElementById("fullNameForm").value;
+}
+
+function handleAuthorEditChange(){
+ Myformdata.author=document.getElementById("authorForm").value; 
+}
+
+function handleColourEditChange(){
+  Myformdata.colour=document.getElementById("colourForm").value; 
+}
+
+function handleCoverEditChange(){
+ Myformdata.covertype=document.getElementById("coverTypeForm").value;
+}
+
+function handleOtherCoverEditChange(){
+ Myformdata.othercovertype=document.getElementById("otherCoverForm").value;
+}
+
+function handlePagesEditChange(){
+ Myformdata.numberofpages=document.getElementById("pagesForm").value;
+}
+
+function handlePriceEditChange(){
+  Myformdata.price=document.getElementById("priceForm").value;
+}
+
+function handleCurrencyEditChange(){
+  Myformdata.currency=document.getElementById("currencyForm").value;
+}
+
+function handleLanguageEditChange(){
+ Myformdata.language=document.getElementById("langForm").value; 
+}
+
+function handleOtherLangEditChange(){
+ Myformdata.otherlanguage=document.getElementById("otherLangForm").value;
+}
+
+function handleOrigLangEditChange(){
+ Myformdata.originallanguage=document.getElementById("origLangForm").value;
+}
+
+function handleOtherOrigLangEditChange(){
+ Myformdata.otheroriginallanguage=document.getElementById("otherOrigLangForm").value;
+}
+
+function handleEditionEditChange(){
+ Myformdata.edition=document.getElementById("editionForm").value; 
+}
+
+function handleDimensionsEditChange(){
+ Myformdata.dimensions=document.getElementById("dimensionsForm").value;
+}
+
+function handlePublisherEditChange(){
+ Myformdata.publisher=document.getElementById("publisherForm").value;
+}
+
+function handlePublMonthEditChange(){
+ Myformdata.publishingmonth=document.getElementById("pubMonthForm").value;
+}
+
+function handlePublDayEditChange(){
+ Myformdata.publishingday=document.getElementById("pubDayForm").value;
+}
+
+function handlePublYearEditChange(){
+  Myformdata.publishingyear=document.getElementById("pubYearForm").value;
+}
+
+function handleOrigPubMonthEditChange(){
+ Myformdata.originalpublishingmonth=document.getElementById("origPubMonthForm").value;
+}
+
+function handleOrigPubDayEditChange(){
+ Myformdata.originalpublishingday=document.getElementById("origPubDayForm").value;
+}
+
+function handleOrigPubYearEditChange(){
+ Myformdata.originalpublishingyear=document.getElementById("origPubYearForm").value;
+}
+
+function handleGenreEditChange(){
+  Myformdata.genre=document.getElementById("genreForm").value;
+}
+
+function handleAgeRestEditChange(){
+  Myformdata.agerestriction=document.getElementById("agerestrictForm").value;
+}
+
 function loadDanceEditItem(){
   localStorage = window.localStorage;
   editItem = JSON.parse(localStorage.getItem("editItem"));
@@ -402,3 +498,4 @@ function loadDanceEditItem(){
   document.getElementById("durationEdit").value = editItem["duration"];
   document.getElementById("preferredWayEdit").value = editItem["wayToPractice"];
 }
+

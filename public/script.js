@@ -149,6 +149,31 @@ function SaveData(e){
 function UpdateData(e){
   console.log(Myformdata)
   Myformdata.id=document.getElementById("_id").value;
+  Myformdata.id=document.getElementById("_id").value;
+  Myformdata.fullname=document.getElementById("fullNameForm").value;
+  Myformdata.title=document.getElementById("titleForm").value;
+  Myformdata.author=document.getElementById("authorForm").value;
+  Myformdata.colour=document.getElementById("colourForm").value;
+  Myformdata.covertype=document.getElementById("coverTypeForm").value;
+  Myformdata.othercovertype=document.getElementById("otherCoverForm").value;
+  Myformdata.numberofpages=document.getElementById("pagesForm").value;
+  Myformdata.price=document.getElementById("priceForm").value;
+  Myformdata.currency=document.getElementById("currencyForm").value;
+  Myformdata.language=document.getElementById("langForm").value;
+  Myformdata.otherlanguage=document.getElementById("otherLangForm").value;
+  Myformdata.originallanguage=document.getElementById("origLangForm").value;
+  Myformdata.otheroriginallanguage=document.getElementById("otherOrigLangForm").value;
+  Myformdata.edition=document.getElementById("editionForm").value;
+  Myformdata.dimensions=document.getElementById("dimensionsForm").value;
+  Myformdata.publisher=document.getElementById("publisherForm").value;
+  Myformdata.publishingmonth=document.getElementById("pubMonthForm").value;
+  Myformdata.publishingday=document.getElementById("pubDayForm").value;
+  Myformdata.publishingyear=document.getElementById("pubYearForm").value;
+  Myformdata.originalpublishingmonth=document.getElementById("origPubMonthForm").value;
+  Myformdata.originalpublishingday=document.getElementById("origPubDayForm").value;
+  Myformdata.originalpublishingyear=document.getElementById("origPubYearForm").value;
+  Myformdata.genre=document.getElementById("genreForm").value;
+  Myformdata.agerestriction=document.getElementById("agerestrictForm").value;
   e.preventDefault();
   $.ajax({
     type: 'POST',

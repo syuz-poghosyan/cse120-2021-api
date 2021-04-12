@@ -79,7 +79,6 @@ app.post('/data/delete', function (req, res) {
 })
 
 app.post('/data/update', function (req, res) {
-  //Todo: Please replace this with edit update code
   client.connect()
   .then(client => {
     let id = req.body.id;

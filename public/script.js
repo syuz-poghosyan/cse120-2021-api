@@ -525,3 +525,6 @@ function loadDanceEditItem(){
   document.getElementById("preferredWayEdit").value = editItem["wayToPractice"];
 }
 
+function goBack() {
+  window.history.back();
+}

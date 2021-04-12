@@ -526,5 +526,5 @@ function loadDanceEditItem(){
 }
 
 function goBack() {
-  window.history.back();
+  window.location.href = "https://cse-120-2021-api-syuzi.herokuapp.com/data";
 }

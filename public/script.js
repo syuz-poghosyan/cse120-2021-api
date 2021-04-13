@@ -526,3 +526,47 @@ function loadDanceEditItem(){
   document.getElementById("durationEdit").value = editItem["duration"];
   document.getElementById("preferredWayEdit").value = editItem["wayToPractice"];
 }
+
+function UpdateData(e){
+  console.log(UpdatedDanceData);
+  var UpdatedDanceData= {};
+  UpdatedDanceData.id=document.getElementById("_id").value;
+  UpdatedDanceData.firstName=document.getElementById("firstNameEdit").value;
+  UpdatedDanceData.Lastname=document.getElementById("LastNameEdit").value;
+  UpdatedDanceData.gender=document.getElementById("genderEdit").value;
+  UpdatedDanceData.birthDate=document.getElementById("birthDateEdit").value;
+  UpdatedDanceData.address=document.getElementById("addressEdit").value;
+  UpdatedDanceData.email=document.getElementById("emailEdit").value;
+  UpdatedDanceData.phone=document.getElementById("phoneEdit").value;
+  UpdatedDanceData.facebook=document.getElementById("facebookEdit").value;
+  UpdatedDanceData.certificate1=document.getElementById("certificate1Edit").value;
+  UpdatedDanceData.certificate2=document.getElementById("certificate2Edit").value;
+  UpdatedDanceData.genre=document.getElementById("genreEdit").value;
+  UpdatedDanceData.competitionInfo=document.getElementById("competitionsEdit").value;
+  UpdatedDanceData.education=document.getElementById("educationEdit").value;
+  UpdatedDanceData.experienceAndSkills=document.getElementById("experiencesEdit").value;
+  UpdatedDanceData.items=document.getElementById("itemsEdit").value;
+  UpdatedDanceData.storyBehind=document.getElementById("storyEdit").value;
+  UpdatedDanceData.benefits=document.getElementById("benefitsEdit").value;
+  UpdatedDanceData.startDate=document.getElementById("practicingDateEdit").value;
+  UpdatedDanceData.frequency=document.getElementById("frequencyEdit").value;
+  UpdatedDanceData.duration=document.getElementById("durationEdit").value;
+  UpdatedDanceData.wayToPractice=document.getElementById("preferredWayEdit").value;
+  e.preventDefault();
+  $.ajax({
+    type: 'POST',
+    url: "https://cse-120-2021-api-syuzi.herokuapp.com/data/update",
+    data: UpdatedDanceData,
+    cache: false,
+    dataType : 'json',
+    success: function (data) {
+      console.log("successfully editted");
+    },
+    error: function (xhr) {
+      console.error("Error in editting", xhr);
+    },
+    complete: function () {
+      console.log("Complete");  
+    }
+  });  
+}

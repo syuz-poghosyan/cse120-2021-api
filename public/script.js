@@ -147,38 +147,38 @@ function SaveData(e){
 }
 
 function UpdateData(e){
-  console.log(Myformdata)
-  Myformdata.id=document.getElementById("_id").value;
-  Myformdata.id=document.getElementById("_id").value;
-  Myformdata.fullname=document.getElementById("fullNameForm").value;
-  Myformdata.title=document.getElementById("titleForm").value;
-  Myformdata.author=document.getElementById("authorForm").value;
-  Myformdata.colour=document.getElementById("colourForm").value;
-  Myformdata.covertype=document.getElementById("coverTypeForm").value;
-  Myformdata.othercovertype=document.getElementById("otherCoverForm").value;
-  Myformdata.numberofpages=document.getElementById("pagesForm").value;
-  Myformdata.price=document.getElementById("priceForm").value;
-  Myformdata.currency=document.getElementById("currencyForm").value;
-  Myformdata.language=document.getElementById("langForm").value;
-  Myformdata.otherlanguage=document.getElementById("otherLangForm").value;
-  Myformdata.originallanguage=document.getElementById("origLangForm").value;
-  Myformdata.otheroriginallanguage=document.getElementById("otherOrigLangForm").value;
-  Myformdata.edition=document.getElementById("editionForm").value;
-  Myformdata.dimensions=document.getElementById("dimensionsForm").value;
-  Myformdata.publisher=document.getElementById("publisherForm").value;
-  Myformdata.publishingmonth=document.getElementById("pubMonthForm").value;
-  Myformdata.publishingday=document.getElementById("pubDayForm").value;
-  Myformdata.publishingyear=document.getElementById("pubYearForm").value;
-  Myformdata.originalpublishingmonth=document.getElementById("origPubMonthForm").value;
-  Myformdata.originalpublishingday=document.getElementById("origPubDayForm").value;
-  Myformdata.originalpublishingyear=document.getElementById("origPubYearForm").value;
-  Myformdata.genre=document.getElementById("genreForm").value;
-  Myformdata.agerestriction=document.getElementById("agerestrictForm").value;
+  console.log(UpdatedBookData);
+  var UpdatedBookData{};
+  UpdatedBookData.id=document.getElementById("_id").value;
+  UpdatedBookData.fullname=document.getElementById("fullNameForm").value;
+  UpdatedBookData.title=document.getElementById("titleForm").value;
+  UpdatedBookData.author=document.getElementById("authorForm").value;
+  UpdatedBookData.colour=document.getElementById("colourForm").value;
+  UpdatedBookData.covertype=document.getElementById("coverTypeForm").value;
+  UpdatedBookData.othercovertype=document.getElementById("otherCoverForm").value;
+  UpdatedBookData.numberofpages=document.getElementById("pagesForm").value;
+  UpdatedBookData.price=document.getElementById("priceForm").value;
+  UpdatedBookData.currency=document.getElementById("currencyForm").value;
+  UpdatedBookData.language=document.getElementById("langForm").value;
+  UpdatedBookData.otherlanguage=document.getElementById("otherLangForm").value;
+  UpdatedBookData.originallanguage=document.getElementById("origLangForm").value;
+  UpdatedBookData.otheroriginallanguage=document.getElementById("otherOrigLangForm").value;
+  UpdatedBookData.edition=document.getElementById("editionForm").value;
+  UpdatedBookData.dimensions=document.getElementById("dimensionsForm").value;
+  UpdatedBookData.publisher=document.getElementById("publisherForm").value;
+  UpdatedBookData.publishingmonth=document.getElementById("pubMonthForm").value;
+  UpdatedBookData.publishingday=document.getElementById("pubDayForm").value;
+  UpdatedBookData.publishingyear=document.getElementById("pubYearForm").value;
+  UpdatedBookData.originalpublishingmonth=document.getElementById("origPubMonthForm").value;
+  UpdatedBookData.originalpublishingday=document.getElementById("origPubDayForm").value;
+  UpdatedBookData.originalpublishingyear=document.getElementById("origPubYearForm").value;
+  UpdatedBookData.genre=document.getElementById("genreForm").value;
+  UpdatedBookData.agerestriction=document.getElementById("agerestrictForm").value;
   e.preventDefault();
   $.ajax({
     type: 'POST',
     url: "https://cse-120-2021-api-syuzi.herokuapp.com/data/update",
-    data: Myformdata,
+    data: UpdatedBookData,
     cache: false,
     dataType : 'json',
     success: function (data) {

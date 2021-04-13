@@ -527,7 +527,7 @@ function loadDanceEditItem(){
   document.getElementById("preferredWayEdit").value = editItem["wayToPractice"];
 }
 
-function UpdateData(e){
+function EditData(e){
   console.log(UpdatedDanceData);
   var UpdatedDanceData= {};
   UpdatedDanceData.id=document.getElementById("_id").value;

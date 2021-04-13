@@ -148,7 +148,7 @@ function SaveData(e){
 
 function UpdateData(e){
   console.log(UpdatedBookData);
-  var UpdatedBookData{};
+  var UpdatedBookData= {};
   UpdatedBookData.id=document.getElementById("_id").value;
   UpdatedBookData.fullname=document.getElementById("fullNameForm").value;
   UpdatedBookData.title=document.getElementById("titleForm").value;

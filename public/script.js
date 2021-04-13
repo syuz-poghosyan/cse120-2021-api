@@ -798,6 +798,52 @@ console.log(MyFormData);
   };
   
 }
+function UpdateData(e){
+  console.log(UpdatedDanceData);
+  var UpdatedDanceData= {};
+  UpdatedDanceData.id=document.getElementById("_id").value;
+  UpdatedDanceData.fullname=document.getElementById("fullNameForm").value;
+  UpdatedDanceData.title=document.getElementById("titleForm").value;
+  UpdatedDanceData.author=document.getElementById("authorForm").value;
+  UpdatedDanceData.colour=document.getElementById("colourForm").value;
+  UpdatedDanceData.covertype=document.getElementById("coverTypeForm").value;
+  UpdatedDanceData.othercovertype=document.getElementById("otherCoverForm").value;
+  UpdatedDanceData.numberofpages=document.getElementById("pagesForm").value;
+  UpdatedDanceData.price=document.getElementById("priceForm").value;
+  UpdatedDanceData.currency=document.getElementById("currencyForm").value;
+  UpdatedDanceData.language=document.getElementById("langForm").value;
+  UpdatedDanceData.otherlanguage=document.getElementById("otherLangForm").value;
+  UpdatedDanceData.originallanguage=document.getElementById("origLangForm").value;
+  UpdatedDanceData.otheroriginallanguage=document.getElementById("otherOrigLangForm").value;
+  UpdatedDanceData.edition=document.getElementById("editionForm").value;
+  UpdatedDanceData.dimensions=document.getElementById("dimensionsForm").value;
+  UpdatedDanceData.publisher=document.getElementById("publisherForm").value;
+  UpdatedDanceData.publishingmonth=document.getElementById("pubMonthForm").value;
+  UpdatedDanceData.publishingday=document.getElementById("pubDayForm").value;
+  UpdatedDanceData.publishingyear=document.getElementById("pubYearForm").value;
+  UpdatedDanceData.originalpublishingmonth=document.getElementById("origPubMonthForm").value;
+  UpdatedDanceData.originalpublishingday=document.getElementById("origPubDayForm").value;
+  UpdatedDanceData.originalpublishingyear=document.getElementById("origPubYearForm").value;
+  UpdatedDanceData.genre=document.getElementById("genreForm").value;
+  UpdatedDanceData.agerestriction=document.getElementById("agerestrictForm").value;
+  e.preventDefault();
+  $.ajax({
+    type: 'POST',
+    url: "https://cse-120-2021-api-syuzi.herokuapp.com/data/update",
+    data: UpdatedDanceData,
+    cache: false,
+    dataType : 'json',
+    success: function (data) {
+      console.log("successfully editted");
+    },
+    error: function (xhr) {
+      console.error("Error in editting", xhr);
+    },
+    complete: function () {
+      console.log("Complete");  
+    }
+  });  
+}
 
 
 function deleteData(id) {

@@ -497,34 +497,6 @@ function handleAgeRestEditChange(){
   Myformdata.agerestriction=document.getElementById("agerestrictForm").value;
 }
 
-function loadDanceEditItem(){
-  localStorage = window.localStorage;
-  editItem = JSON.parse(localStorage.getItem("editItem"));
-  console.log(editItem);
-  document.getElementById("_id").value = editItem["_id"];
-  document.getElementById("firstNameEdit").value = editItem["firstName"];
-  document.getElementById("LastNameEdit").value =editItem["Lastname"];
-  document.getElementById("genderEdit").value = editItem["gender"];  
-  document.getElementById("birthDateEdit").value = editItem["birthDate"]; 
-  document.getElementById("addressEdit").value = editItem["address"]; 
-  document.getElementById("emailEdit").value = editItem["email"]; 
-  document.getElementById("phoneEdit").value = editItem["phone"]; 
-  document.getElementById("facebookEdit").value = editItem["facebook"]; 
-  document.getElementById("certificate1Edit").value = editItem["certificate1"]; 
-  document.getElementById("certificate2Edit").value = editItem["certificate2"]; 
-  document.getElementById("genreEdit").value = editItem["genre"];
-  document.getElementById("competitionsEdit").value = editItem["competitionInfo"];
-  document.getElementById("educationEdit").value = editItem["education"];
-  document.getElementById("experiencesEdit").value = editItem["experienceAndSkills"]; 
-  document.getElementById("itemsEdit").value = editItem["items"];
-  document.getElementById("storyEdit").value = editItem["storyBehind"];
-  document.getElementById("benefitsEdit").value = editItem["benefits"]; 
-  document.getElementById("practicingDateEdit").value = editItem["startDate"];
-  document.getElementById("frequencyEdit").value = editItem["frequency"];
-  document.getElementById("durationEdit").value = editItem["duration"];
-  document.getElementById("preferredWayEdit").value = editItem["wayToPractice"];
-}
-
 
 var requiredFields = [
  "firstName", "frequency", "Lastname", "gender", "wayToPractice", "birthDate", "duration", "startDate", "education", "items", "genre"

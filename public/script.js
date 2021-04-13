@@ -524,7 +524,3 @@ function loadDanceEditItem(){
   document.getElementById("durationEdit").value = editItem["duration"];
   document.getElementById("preferredWayEdit").value = editItem["wayToPractice"];
 }
-
-function goBack() {
-  window.location = "https://cse-120-2021-api-syuzi.herokuapp.com";
-}

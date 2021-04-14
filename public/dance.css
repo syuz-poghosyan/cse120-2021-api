@@ -74,7 +74,7 @@ body, input, textarea, select, button { font-size:16px; font-family: "Open Sans"
 	.logo-cont:hover { opacity:.8; }
 	.logo-cont:active { opacity:.7; }
 	
-	.logo { position:relative; top:0; width:200px; height:200px; margin:0 auto; background:url(/img/logo.jpg) no-repeat center center; background-size:100%; -webkit-background-size:100%; -moz-background-size:100%; -o-background-size:100%; }
+	.logo { position:relative; top:0; width:200px; height:200px; margin:0 auto; background:url(/images/logo.jpg) no-repeat center center; background-size:100%; -webkit-background-size:100%; -moz-background-size:100%; -o-background-size:100%; }
 	.page .logo { background-size:70%; -webkit-background-size:70%; -moz-background-size:70%; -o-background-size:70%; }
 	
 	.home h1.site-title, .page h2.site-title { width:347px; height:56px; margin:15px auto; padding:0; background:url(/img/site-title-hy.png) no-repeat center center; font-size:0 !important; color:#555; font-weight:normal; }

@@ -278,25 +278,3 @@ display: none;
   color: rgb(188, 188, 188);
 }
 
-.navbar {
-  overflow: hidden;
-  background-color: rgb(175, 175, 177);
-  width: 100%; 
-  text-align: center;
-}
-
-
-.navbar a {
-  float: left;
-  display: block;
-  color: #000000;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-
-.navbar a:hover {
-  background: #074069;
-  color: rgb(255, 255, 255);
-}

@@ -142,32 +142,3 @@ loadedData.forEach(item => {
   })
 }
 
-function loadEditItem() {
-  localStorage = window.localStorage;
-  editItem = JSON.parse(localStorage.getItem("editItem"));
-  console.log(editItem);
-  document.getElementById("_id").value = editItem["_id"];
-  document.getElementById("firstNameForm").value = editItem["firstName"];
-  document.getElementById("LastNameForm").value =editItem["Lastname"];
-  document.getElementById("genderForm").value = editItem["gender"];  
-  document.getElementById("birthDateForm").value = editItem["birthDate"]; 
-  document.getElementById("addressForm").value = editItem["address"]; 
-  document.getElementById("emailForm").value = editItem["email"]; 
-  document.getElementById("phoneForm").value = editItem["phone"]; 
-  document.getElementById("facebookForm").value = editItem["facebook"]; 
-  document.getElementById("certificate1Form").value = editItem["certificate1"]; 
-  document.getElementById("certificate2Form").value = editItem["certificate2"]; 
-  document.getElementById("genreForm").value = editItem["genre"];
-  document.getElementById("competitionsForm").value = editItem["competitionInfo"];
-  document.getElementById("educationForm").value = editItem["education"];
-  document.getElementById("experiencesForm").value = editItem["experienceAndSkills"]; 
-  document.getElementById("itemsForm").value = editItem["items"];
-  document.getElementById("storyForm").value = editItem["storyBehind"];
-  document.getElementById("benefitsForm").value = editItem["benefits"]; 
-  document.getElementById("practicingDateForm").value = editItem["startDate"];
-  document.getElementById("frequencyForm").value = editItem["frequency"];
-  document.getElementById("durationForm").value = editItem["duration"];
-  document.getElementById("preferredWayForm").value = editItem["wayToPractice"];
-}
-
-  

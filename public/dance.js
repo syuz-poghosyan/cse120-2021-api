@@ -1,38 +1,4 @@
 
-
-
-function deleteData(id) {
-
-    var r = confirm("Are you sure you want to delete the item with the following ID? " + id);
-    if (r == true) {
-      
-    } else {
-      return;
-    }
-
-    var tmp = {
-        "id": id
-    }
-
-    $.ajax({
-        type: 'POST',
-        url: "https://cse-120-2021-api-syuzi.herokuapp.com/data/delete",
-        data: tmp,
-        cache: false,
-        dataType : 'json',
-        success: function (data) {
-            console.log("success");
-            document.getElementById("div" + id).style.display = "none";
-        },
-        error: function (xhr) {
-            console.error("Error in post", xhr);
-        },
-        complete: function () {
-            console.log("Complete");  
-        }
-    });
-}
-
 function loadExistingData() {
   myDanceData = [];
   otherData = [];

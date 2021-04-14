@@ -349,12 +349,9 @@ function loadExistingData() {
             } else {
               myDanceData.push(elem);
             }
-          } else {
-            otherData.push(elem);
-          }
+          } 
         })
         displayData(myDanceData, "danceDataContainer");
-        displayData(otherData, "otherDataContainer");
       },
         error : function(data) {
             console.log("Error");
@@ -423,16 +420,6 @@ function displayData(data, containerDivName) {
     
 
 }
-
-function toggleOtherData() {
-  var otherData = document.getElementById("otherDataContainer");
-  if (otherData.style.display == "block") {
-    otherData.style.display = "none";
-  } else {
-    otherData.style.display = "block";
-  }
-}
-
 
 
 var loadedData = [];

@@ -187,7 +187,7 @@ body, input, textarea, select, button { font-size:16px; font-family: "Open Sans"
 
 	footer { position:relative; height:250px; margin-top:-250px; text-align:center; min-width:300px; background:#074069; overflow:hidden; color:#ddd; font-size:13px; }
 
-	.logo-footer { position:relative; top:0; width:80px; height:80px; margin:20px auto 0; background:url(/img/logo.jpg) no-repeat center center; 
+	.logo-footer { position:relative; top:0; width:80px; height:80px; margin:20px auto 0; background:url(/images/logo.jpg) no-repeat center center; 
 		background-size:100%; -webkit-background-size:100%; -moz-background-size:100%; -o-background-size:100%;
 	}
 	.ie8 .logo-footer { display:none; }

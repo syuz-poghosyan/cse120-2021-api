@@ -1,35 +1,5 @@
 
 
-function SaveData(event){
-  var check=CheckData();
-  if (check==1){
-console.log(MyFormData);
-
-  event.preventDefault();
-   $.ajax({
-    type: 'POST',
-    url: "https://cse-120-2021-api-syuzi.herokuapp.com/data",
-    data: MyFormData,
-    cache: false,
-    dataType : 'json',
-    success: function (data) {
-      console.log("success");
-    },
-    error: function (xhr) {
-      console.error("Error in post", xhr);
-    },
-    complete: function () {
-      console.log("Complete");  
-    }
-  });  
- 
-  }
-  else{
-    console.log("Data not saved");
-  };
-  
-}
-
 
 function deleteData(id) {
 

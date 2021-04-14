@@ -690,7 +690,7 @@ function handleCertificate2Change(){
   MyFormData.certificate2=document.getElementById("cert2").value;
 }
 
-function handleGenreChange(event){
+function handleDanceGenreChange(event){
   var st="";
   if (document.getElementById("type1").checked) {
       st= st.concat( document.getElementById("type1").value, "; ");
@@ -711,7 +711,6 @@ function handleGenreChange(event){
       st= st.concat( document.getElementById("type6").value, "; ");
   }
   if (document.getElementById("typeother").checked) {
-      //st= st.concat( document.getElementById("typeother").value, "; ");
       st= st.concat( document.getElementById("othertext1").value, "; ");
   }
   if (st.length !=0){

@@ -1,31 +1,4 @@
 
-function loadExistingData() {
-  myDanceData = [];
-  otherData = [];
-    $.ajax({
-        type : "GET",
-        url : "https://cse-120-2021-api-syuzi.herokuapp.com/data",
-        dataType : "json",
-        success : function(data) {
-          loadedData = data.data;
-        	console.log("success", data);
-            data.data.forEach(elem => {
-          if (elem["owner"] == "Syuzanna") {
-            if (elem["project"] == "Dance") {
-              myBookData.push(elem);
-            } else {
-              myDanceData.push(elem);
-            }
-          } 
-        })
-        displayData(myDanceData, "danceDataContainer");
-      },
-        error : function(data) {
-            console.log("Error");
-        }
-    });
-}
-
 function displayData(data, containerDivName) {
     document.getElementById(containerDivName).innerHTML = "";
     data.forEach(elem => {

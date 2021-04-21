@@ -146,52 +146,7 @@ function SaveData(e){
   });  
 }
 
-function UpdateData(e){
-  console.log(UpdatedBookData);
-  var UpdatedBookData= {};
-  UpdatedBookData.id=document.getElementById("_id").value;
-  UpdatedBookData.fullname=document.getElementById("fullNameForm").value;
-  UpdatedBookData.title=document.getElementById("titleForm").value;
-  UpdatedBookData.author=document.getElementById("authorForm").value;
-  UpdatedBookData.colour=document.getElementById("colourForm").value;
-  UpdatedBookData.covertype=document.getElementById("coverTypeForm").value;
-  UpdatedBookData.othercovertype=document.getElementById("otherCoverForm").value;
-  UpdatedBookData.numberofpages=document.getElementById("pagesForm").value;
-  UpdatedBookData.price=document.getElementById("priceForm").value;
-  UpdatedBookData.currency=document.getElementById("currencyForm").value;
-  UpdatedBookData.language=document.getElementById("langForm").value;
-  UpdatedBookData.otherlanguage=document.getElementById("otherLangForm").value;
-  UpdatedBookData.originallanguage=document.getElementById("origLangForm").value;
-  UpdatedBookData.otheroriginallanguage=document.getElementById("otherOrigLangForm").value;
-  UpdatedBookData.edition=document.getElementById("editionForm").value;
-  UpdatedBookData.dimensions=document.getElementById("dimensionsForm").value;
-  UpdatedBookData.publisher=document.getElementById("publisherForm").value;
-  UpdatedBookData.publishingmonth=document.getElementById("pubMonthForm").value;
-  UpdatedBookData.publishingday=document.getElementById("pubDayForm").value;
-  UpdatedBookData.publishingyear=document.getElementById("pubYearForm").value;
-  UpdatedBookData.originalpublishingmonth=document.getElementById("origPubMonthForm").value;
-  UpdatedBookData.originalpublishingday=document.getElementById("origPubDayForm").value;
-  UpdatedBookData.originalpublishingyear=document.getElementById("origPubYearForm").value;
-  UpdatedBookData.genre=document.getElementById("genreForm").value;
-  UpdatedBookData.agerestriction=document.getElementById("agerestrictForm").value;
-  e.preventDefault();
-  $.ajax({
-    type: 'POST',
-    url: "https://cse-120-2021-api-syuzi.herokuapp.com/data/update",
-    data: UpdatedBookData,
-    cache: false,
-    dataType : 'json',
-    success: function (data) {
-      console.log("successfully editted");
-    },
-    error: function (xhr) {
-      console.error("Error in editting", xhr);
-    },
-    complete: function () {
-      console.log("Complete");  
-    }
-  });  
-}
+
 
 var Myformdata={
   "project": "Book",
@@ -223,38 +178,4 @@ var Myformdata={
 }
 
 
-
-
-
-function loadBookEditItem() {
-  localStorage = window.localStorage;
-  editItem = JSON.parse(localStorage.getItem("editItem"));
-  console.log(editItem);
-  document.getElementById("_id").value = editItem["_id"];
-  document.getElementById("titleForm").value = editItem["title"];
-  document.getElementById("fullNameForm").value =editItem["fullname"];
-  document.getElementById("authorForm").value = editItem["author"];  
-  document.getElementById("colourForm").value = editItem["colour"]; 
-  document.getElementById("coverTypeForm").value = editItem["covertype"]; 
-  document.getElementById("otherCoverForm").value = editItem["othercovertype"]; 
-  document.getElementById("pagesForm").value = editItem["numberofpages"]; 
-  document.getElementById("priceForm").value = editItem["price"]; 
-  document.getElementById("currencyForm").value = editItem["currency"]; 
-  document.getElementById("langForm").value = editItem["language"]; 
-  document.getElementById("otherLangForm").value = editItem["otherlanguage"];
-  document.getElementById("origLangForm").value = editItem["originallanguage"];
-  document.getElementById("otherOrigLangForm").value = editItem["otheroriginallanguage"];
-  document.getElementById("editionForm").value = editItem["edition"]; 
-  document.getElementById("dimensionsForm").value = editItem["dimensions"];
-  document.getElementById("publisherForm").value = editItem["publisher"];
-  document.getElementById("pubMonthForm").value = editItem["publishingmonth"]; 
-  document.getElementById("pubDayForm").value = editItem["publishingday"];
-  document.getElementById("pubYearForm").value = editItem["publishingyear"];
-  document.getElementById("origPubMonthForm").value = editItem["originalpublishingmonth"];
-  document.getElementById("origPubDayForm").value = editItem["originalpublishingday"];
-  document.getElementById("origPubYearForm").value = editItem["originalpublishingyear"];
-  document.getElementById("genreForm").value = editItem["genre"];
-  document.getElementById("agerestrictForm").value = editItem["agerestriction"];
-  
-}
 

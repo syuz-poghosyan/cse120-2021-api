@@ -162,3 +162,20 @@ label{
   font-size: 15px;
   cursor: pointer;
 }
+
+
+#editDance { 
+  position:relative; 
+  display:inline-block; 
+  top:0; 
+  font-weight:normal; 
+  padding:7px 20px; 
+  margin:15px;
+  text-align:center; 
+  cursor:pointer; 
+  background-color:#074069; 
+  border:2px solid #074069; 
+  text-shadow:none; 
+  color:#fff;
+  border-radius:2px;
+}

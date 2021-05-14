@@ -393,6 +393,6 @@ function EditData(e){
   });  
 }
 
-function backToDashboard(){
-  window.location.replace("https://cse-120-2021-api-syuzi.herokuapp.com/admin/admin.html");
+function backToAdmin(){
+  location.href="https://cse-120-2021-api-syuzi.herokuapp.com/admin/admin.html";
 }

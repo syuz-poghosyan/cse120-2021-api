@@ -301,7 +301,3 @@ console.log(MyFormData);
   
 }
 
-
-function reset(){
-  document.getElementById("center").reset();
-}
